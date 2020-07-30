@@ -9,11 +9,11 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(Integer id, String nome, String cpf, LocalDate data_aniversario) {
+    public Funcionario(Integer id, String nome, String cpf, LocalDate dataAniversario) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
-        this.data_aniversario = data_aniversario;
+        this.dataAniversario = dataAniversario;
     }
 
     @Id
@@ -26,8 +26,8 @@ public class Funcionario {
     @Column(length = 11, unique = true, nullable = false)
     private String cpf;
 
-    @Column
-    private LocalDate data_aniversario;
+    @Column(name = "data_aniversario")
+    private LocalDate dataAniversario;
 
     public Integer getId() {
         return id;
@@ -53,12 +53,12 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public LocalDate getData_aniversario() {
-        return data_aniversario;
+    public LocalDate getDataAniversario() {
+        return dataAniversario;
     }
 
-    public void setData_aniversario(LocalDate data_aniversario) {
-        this.data_aniversario = data_aniversario;
+    public void setDataAniversario(LocalDate dataAniversario) {
+        this.dataAniversario = dataAniversario;
     }
 // TODO: Criar entity Endereco e Telefone relacionado com Funcionario
 }

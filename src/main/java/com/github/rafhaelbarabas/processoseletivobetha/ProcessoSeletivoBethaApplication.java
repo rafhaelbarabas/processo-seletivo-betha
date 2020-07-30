@@ -19,7 +19,7 @@ public class ProcessoSeletivoBethaApplication {
 			Funcionario funcionario = new Funcionario();
 			funcionario.setNome("Rafhael Andrade");
 			funcionario.setCpf("08588042983");
-			funcionario.setData_aniversario(LocalDate.now());
+			funcionario.setDataAniversario(LocalDate.now());
 			repository.save(funcionario);
 		};
 	}

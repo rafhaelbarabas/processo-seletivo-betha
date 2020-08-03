@@ -2,17 +2,17 @@ package com.github.rafhaelbarabas.processoseletivobetha.model.entity;
 
 import javax.persistence.*;
 
+@Entity
 public class Telefone {
 
     public Telefone() {
     }
 
-    public Telefone(Integer id, Funcionario funcionario, String numero, String tipo, Boolean principal) {
+    public Telefone(Integer id, Funcionario funcionario, String numero, String tipo) {
         this.id = id;
         this.funcionario = funcionario;
         this.numero = numero;
         this.tipo = tipo;
-        this.principal = principal;
     }
 
     @Id
@@ -20,17 +20,14 @@ public class Telefone {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name = "id_funcionario")
+    @JoinColumn(nullable = false, name = "id_funcionario", foreignKey = @ForeignKey(name="fk_telefone_funcionario"))
     private Funcionario funcionario;
 
-    @Column(length = 15, nullable = false) // TODO: Gravar sem formatacao
+    @Column(length = 15, nullable = false)
     private String numero;
 
-    @Column(nullable = false)
+    @Column(length = 1, nullable = false)
     private String tipo;
-
-    @Column(nullable = false)
-    private Boolean principal;
 
     public Integer getId() {
         return id;
@@ -62,13 +59,5 @@ public class Telefone {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public Boolean getPrincipal() {
-        return principal;
-    }
-
-    public void setPrincipal(Boolean principal) {
-        this.principal = principal;
     }
 }

@@ -2,6 +2,7 @@ package com.github.rafhaelbarabas.processoseletivobetha.model.entity;
 
 import javax.persistence.*;
 
+@Entity
 public class Endereco {
 
     public Endereco() {
@@ -22,7 +23,7 @@ public class Endereco {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(nullable = false,name = "id_funcionario")
+    @JoinColumn(nullable = false, name = "id_funcionario", foreignKey = @ForeignKey(name="fk_endereco_funcionario"))
     private Funcionario funcionario;
 
     @Column(length = 250, nullable = false)

@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/enderecos")
+@CrossOrigin("*")
 public class EnderecoController {
 
     private final EnderecoRepository repository;

@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/telefones")
+@CrossOrigin("*")
 public class TelefoneController {
 
     private final TelefoneRepository repository;

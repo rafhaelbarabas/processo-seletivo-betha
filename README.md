@@ -12,8 +12,4 @@ Projeto desenvolvido para um processo seletivo para vaga de programador na verti
 * Postgres SQL
 
 # Segurança
-* Autenticação Token OAuth2
-
-# Install
-
-in progress...
+* Autenticação Token OAuth2 Spring security <pendente>
